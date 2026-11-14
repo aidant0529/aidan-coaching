@@ -1,32 +1,326 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="VEX V5RC coaching with Aidan of 9189X — robot design, driving, strategy and competition preparation.">
-<title>Aidan | VEX Robotics Coaching</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aidan Tan — Robotics & Coaching</title>
+<meta name="description" content="Aidan Tan — founder of 9189X, robotics competitor and VEX V5RC coach.">
 <style>
-:root{--bg:#080d18;--panel:#111b2c;--line:#28364a;--text:#f4f7ff;--muted:#a7b6ca;--accent:#5ce1e6;--accent2:#8f9cff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 24px}header{position:sticky;top:0;z-index:5;background:#080d18ed;border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}nav{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:20px}.logo{font-weight:900;letter-spacing:.08em}.logo span{color:var(--accent)}.navlinks{display:flex;gap:24px;font-size:14px;color:var(--muted)}.navlinks a:hover{color:white}.hero{padding:110px 0 90px;background:radial-gradient(ellipse at 80% 15%,#20335d 0,transparent 48%)}.eyebrow{text-transform:uppercase;letter-spacing:.2em;color:var(--accent);font-size:12px;font-weight:800}h1{font-size:clamp(48px,8vw,92px);letter-spacing:-.065em;line-height:1.04;margin:18px 0 24px;max-width:850px}h1 em{font-style:normal;color:var(--accent)}.lead{font-size:19px;color:var(--muted);max-width:660px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}.btn{padding:13px 22px;border-radius:10px;font-weight:750;background:var(--accent);color:#06111a;display:inline-block}.btn.secondary{background:transparent;border:1px solid #53627a;color:white}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:65px}.stat,.card,.photo{background:var(--panel);border:1px solid var(--line);border-radius:16px}.stat{padding:22px}.stat strong{display:block;font-size:32px;letter-spacing:-.04em;color:var(--accent)}.stat small{color:var(--muted)}section{padding:80px 0}.section-title{font-size:clamp(30px,4vw,46px);letter-spacing:-.045em;line-height:1.15;margin:10px 0 16px}.sub{color:var(--muted);max-width:680px;margin-bottom:30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:28px}.card h3{margin:8px 0;font-size:21px}.card p{color:var(--muted);margin-bottom:0}.symbol{font-size:29px}.about{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center}.about-panel{padding:32px;background:linear-gradient(135deg,#162741,#111b2c);border:1px solid var(--line);border-radius:18px}.about-panel p{color:var(--muted)}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.photo{overflow:hidden;aspect-ratio:4/3;position:relative;background:linear-gradient(145deg,#1b2c46,#0e1727);display:flex;align-items:center;justify-content:center;text-align:center;color:#8496b1;font-size:14px;padding:20px}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.photo figcaption{position:absolute;bottom:0;left:0;right:0;padding:35px 14px 14px;background:linear-gradient(transparent,rgba(0,0,0,.88));font-size:13px;font-weight:700;color:#fff;text-align:left}.photo img{transition:transform .25s}.photo:hover img{transform:scale(1.045)}.contact{background:linear-gradient(120deg,#152b3c,#151a36);border:1px solid #36526c;border-radius:22px;padding:44px}.contact p{color:#c2d1e0}.location{color:var(--accent);font-weight:700}footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}@media(max-width:760px){.navlinks{gap:12px;font-size:12px}.navlinks a:nth-child(2){display:none}.hero{padding:75px 0}.stats{grid-template-columns:repeat(2,1fr);margin-top:40px}.grid,.gallery,.about{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.contact{padding:26px}}@media(max-width:420px){.navlinks a:nth-child(3){display:none}.gallery{grid-template-columns:1fr}}
+:root {
+  --bg: #faf9f6;
+  --text: #222222;
+  --muted: #777777;
+  --line: #e4e2dd;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+a:hover { opacity: .55; }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 30px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  font-size: 14px;
+}
+nav .name { font-weight: 600; }
+nav .links { display: flex; gap: 28px; }
+.hero { padding: 115px 0 120px; }
+.eyebrow {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: clamp(48px, 7vw, 90px);
+  font-weight: 500;
+  letter-spacing: -.065em;
+  line-height: 1.07;
+  margin: 25px 0 30px;
+}
+.intro {
+  max-width: 630px;
+  font-size: 19px;
+  line-height: 1.75;
+  color: #666;
+}
+.section {
+  padding: 85px 0;
+  border-top: 1px solid var(--line);
+}
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 40px;
+}
+h2 {
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: -.04em;
+  margin: 0;
+}
+.small { font-size: 13px; color: var(--muted); }
+.about {
+  max-width: 740px;
+  font-size: 19px;
+  line-height: 1.9;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 55px;
+}
+.stat {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.stat strong {
+  display: block;
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -.05em;
+}
+.stat span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.gallery img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  background: #ecebe7;
+}
+.gallery img:first-child {
+  grid-column: span 2;
+  height: 530px;
+}
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+}
+.service {
+  border-top: 1px solid var(--line);
+  padding: 25px 0;
+}
+.service h3 {
+  font-size: 21px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+.service p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0;
+}
+.contact-heading {
+  font-size: clamp(45px, 7vw, 85px);
+  font-weight: 500;
+  letter-spacing: -.06em;
+  line-height: 1.1;
+  margin: 20px 0 35px;
+}
+.contact-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+.contact-links a {
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 6px;
+}
+footer {
+  border-top: 1px solid var(--line);
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 12px;
+}
+@media(max-width: 700px) {
+  .container { padding: 0 22px; }
+  nav .links { gap: 15px; font-size: 12px; }
+  .hero { padding: 85px 0; }
+  .section { padding: 65px 0; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .gallery { gap: 10px; }
+  .gallery img { height: 190px; }
+  .gallery img:first-child { height: 270px; }
+  .services { grid-template-columns: 1fr; gap: 0; }
+  footer { gap: 15px; }
+}
 </style>
 </head>
+
 <body>
-<header><div class="wrap"><nav><a class="logo" href="#home">AIDAN<span> / 9189X</span></a><div class="navlinks"><a href="#about">About</a><a href="#coaching">Coaching</a><a href="#gallery">Photos</a><a href="#contact">Contact</a></div></nav></div></header>
-<main>
-<div class="hero" id="home"><div class="wrap"><div class="eyebrow">VEX V5RC • Competitive Robotics Coaching</div><h1>Build smarter.<br>Drive better.<br><em>Compete stronger.</em></h1><p class="lead">I'm Aidan, founder and former captain of 9189X. I help VEX teams sharpen their robot design, driving, match strategy, and competition performance.</p><div class="actions"><a class="btn" href="#contact">Work With Me</a><a class="btn secondary" href="#about">My Experience</a></div><div class="stats"><div class="stat"><strong>4×</strong><small>Worlds Qualifier</small></div><div class="stat"><strong>2×</strong><small>Signature Event Champion</small></div><div class="stat"><strong>2×</strong><small>Texas Region 2 State Champion</small></div><div class="stat"><strong>30+</strong><small>Competition Awards</small></div></div></div></div>
-<section id="about"><div class="wrap about"><div><div class="eyebrow">About Me</div><h2 class="section-title">From the competition floor to your team.</h2><p class="sub">I founded and captained 9189X, a student-run VEX robotics team. Across four Worlds qualifications and multiple championship wins, I've developed hands-on experience in designing competitive robots, driving under pressure, and making smart strategic decisions.</p><p class="sub">I've also helped mentor teams internationally. My coaching focuses on practical improvements your team can apply at practice and at tournaments.</p></div><div class="about-panel"><div class="eyebrow">Competition Highlights</div><h3>9189X and beyond</h3><p>4× VEX Worlds Qualifier (2023–2026)</p><p>Space City Signature Event Champion (2025)</p><p>DFW Robot Rodeo Signature Event Champion (2026)</p><p>2× Texas Region 2 State Champion</p></div></div></section>
-<section id="coaching" style="background:#0b1321"><div class="wrap"><div class="eyebrow">Coaching</div><h2 class="section-title">What we can work on.</h2><p class="sub">Personalized sessions for developing teams and experienced competitors alike.</p><div class="grid"><div class="card"><div class="symbol">⚙️</div><h3>Robot Design</h3><p>Mechanism reviews, reliability, iteration, and performance optimization.</p></div><div class="card"><div class="symbol">🎮</div><h3>Driving & Skills</h3><p>Driver drills, consistency, scoring efficiency, and skills run planning.</p></div><div class="card"><div class="symbol">🧠</div><h3>Match Strategy</h3><p>Game analysis, decision-making, alliance strategy, and tournament preparation.</p></div></div></div></section>
-<section id="gallery"><div class="wrap"><div class="eyebrow">Gallery</div><h2 class="section-title">Robots, events, and highlights.</h2><p class="sub">A look at the builds, teams, and competitions behind 9189X.</p><div class="gallery"><figure class="photo"><img src="texas-state-2025.jpg" alt="2025 Texas Region 2 State Championship" loading="lazy"></figure><figure class="photo"><img src="space-city-2025.jpg" alt="2025 Space City Signature Event" loading="lazy"></figure><figure class="photo"><img src="robot-rodeo-2026.jpg" alt="2026 DFW Robot Rodeo Champions" loading="lazy"></figure><figure class="photo"><img src="competition-robot.jpg" alt="9189X Competition Robot" loading="lazy"></figure><figure class="photo"><img src="robot-closeup.jpg" alt="9189X Robot Build" loading="lazy"></figure><figure class="photo"><img src="awards-collection.jpg" alt="9189X Awards & Engineering Notebook" loading="lazy"></figure><figure class="photo"><img src="team-2026.jpg" alt="2026 DFW Robot Rodeo Team" loading="lazy"></figure></div></div></section>
-<section id="contact"><div class="wrap"><div class="contact"><div class="eyebrow">Get in touch</div><h2 class="section-title">Let's improve your next season.</h2><p>Available for <strong>virtual coaching worldwide</strong> and <strong>in-person coaching in DFW, Austin, and Houston</strong>.</p><p class="location">Virtual • Dallas–Fort Worth • Austin • Houston</p><p>Interested in coaching? Reach out by text or Discord to discuss your team and goals.</p><div class="actions"><a class="btn" href="sms:+14695456169">💬 Text Me: (469) 545-6169</a><button class="btn secondary" type="button" onclick="copyDiscord(this)" style="cursor:pointer;font:inherit">🎮 Copy Discord: y0lunn</button></div><p style="font-size:13px">Discord username: <strong>y0lunn</strong> · <a href="https://discord.com/app" target="_blank" rel="noopener" style="text-decoration:underline">Open Discord</a></p></div></div></section>
-</main><footer><div class="wrap">© <span id="year"></span> Aidan • 9189X • Independent VEX Robotics Coaching</div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
-<script>
-function copyDiscord(button) {
-  const username = 'y0lunn';
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(username).then(() => {
-      button.textContent = '✓ Copied: y0lunn';
-      setTimeout(() => button.textContent = '🎮 Copy Discord: y0lunn', 2500);
-    }).catch(() => { window.prompt('Copy my Discord username:', username); });
-  } else { window.prompt('Copy my Discord username:', username); }
-}
-</script>
-</body></html>
+<div class="container">
+
+<nav>
+  <a class="name" href="#">Aidan Tan.</a>
+  <div class="links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#coaching">Coaching</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Robotics / Engineering / Coaching</div>
+  <h1>Hi, I'm Aidan.<br>I build robots.</h1>
+  <p class="intro">
+    I'm the founder of 9189X, a competitive robotics
+    team based in Texas. I specialize in robot design,
+    driving, and match strategy, and help other teams
+    reach their competitive potential.
+  </p>
+</header>
+
+<section class="section" id="about">
+  <div class="section-head">
+    <h2>About me</h2>
+    <span class="small">01 / Background</span>
+  </div>
+
+  <p class="about">
+    I've spent the past several years competing in
+    VEX Robotics, building and driving robots at
+    regional, national, and international competitions.
+    Through 9189X, I've gained experience in engineering,
+    competition strategy, and team leadership.
+    I now work with other teams to help them improve
+    their performance and achieve their goals.
+  </p>
+
+  <div class="stats">
+    <div class="stat">
+      <strong>4×</strong>
+      <span>Worlds Qualifier</span>
+    </div>
+    <div class="stat">
+      <strong>2×</strong>
+      <span>Signature Event Champion</span>
+    </div>
+    <div class="stat">
+      <strong>2×</strong>
+      <span>Texas State Champion</span>
+    </div>
+    <div class="stat">
+      <strong>30+</strong>
+      <span>Competition Awards</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="section-head">
+    <h2>Selected work</h2>
+    <span class="small">02 / Robotics & Competitions</span>
+  </div>
+
+  <div class="gallery">
+    <img src="team-2026.jpg" alt="9189X team">
+    <img src="texas-state-2025.jpg" alt="State championship">
+    <img src="space-city-2025.jpg" alt="Space City">
+    <img src="robot-rodeo-2026.jpg" alt="Robot Rodeo">
+    <img src="competition-robot.jpg" alt="Competition robot">
+    <img src="robot-closeup.jpg" alt="Robot closeup">
+    <img src="awards-collection.jpg" alt="Awards">
+  </div>
+</section>
+
+<section class="section" id="coaching">
+  <div class="section-head">
+    <h2>Coaching</h2>
+    <span class="small">03 / What I offer</span>
+  </div>
+
+  <div class="services">
+    <div class="service">
+      <h3>Robot Design</h3>
+      <p>
+        Mechanical design, building techniques,
+        troubleshooting, and robot optimization.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Driving & Skills</h3>
+      <p>
+        Driver consistency, practice routines,
+        skills strategies, and performance improvement.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Match Strategy</h3>
+      <p>
+        Game analysis, alliance strategy,
+        match preparation, and tournament decisions.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Competition Preparation</h3>
+      <p>
+        Helping teams prepare for States,
+        Signature Events, and Worlds.
+      </p>
+    </div>
+  </div>
+
+  <p class="intro" style="margin-top:45px">
+    Available for in-person coaching in Dallas–Fort Worth,
+    Austin, and Houston, as well as virtual coaching worldwide.
+  </p>
+</section>
+
+<section class="section" id="contact">
+  <div class="eyebrow">04 / Contact</div>
+  <h2 class="contact-heading">Let's work together.</h2>
+  <p class="intro">
+    Interested in coaching? Feel free to reach out
+    to discuss your team's goals.
+  </p>
+
+  <div class="contact-links">
+    <a href="sms:+14695456169">Text me</a>
+    <a href="https://discord.com/app" target="_blank" rel="noopener noreferrer">Discord: y0lunn</a>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Aidan Tan / 9189X</span>
+  <span>Designed & built with purpose.</span>
+</footer>
+
+</div>
+</body>
+</html>
